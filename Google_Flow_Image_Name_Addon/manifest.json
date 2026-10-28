@@ -1,0 +1,27 @@
+{
+    "name": "Google_Flow_Image_Name_Addon",
+    "description": "ALT to copy hovered Image Name.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "clipboardWrite"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://flow.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
